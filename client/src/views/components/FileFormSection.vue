@@ -20,7 +20,7 @@ const handleFileChange = (e: Event) => {
 
 <template>
   <form
-    class="group animate-smooth isolate mx-auto mt-10 grid w-full max-w-9/10 flex-none grid-cols-1 grid-rows-1 overflow-hidden rounded-4xl border-2 border-dashed border-neutral-400 bg-neutral-50 hover:border-blue-700 lg:max-w-250"
+    class="group animate-smooth isolate mx-auto mt-10 grid w-full max-w-9/10 flex-none grid-cols-1 grid-rows-1 overflow-hidden rounded-4xl border-2 border-dashed border-neutral-400 bg-neutral-50 hover:border-blue-700 lg:max-w-300"
     @submit.prevent
   >
     <!-- Sekcja podglądu -->
@@ -62,11 +62,7 @@ const handleFileChange = (e: Event) => {
       </h3>
 
       <p class="min-h-[2.5rlh] flex-none leading-normal" :class="{ 'text-neutral-50': previewUrl }">
-        <span
-          v-if="errorMessage"
-          class="font-medium text-blue-700"
-          :class="{ 'text-red-400': previewUrl }"
-        >
+        <span v-if="errorMessage" class="font-medium text-blue-700">
           {{ errorMessage }}
         </span>
         <span v-else>
