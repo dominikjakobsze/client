@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ImagePlus } from 'lucide-vue-next'
-import { useFilePreview } from '@/composables/useFilePreview'
+import { useFilePreview } from '@/shared/composables/use-file-preview'
 
 const MAX_SIZE_BYTES = 10 * 1024 * 1024
 const ALLOWED_TYPES = ['image/jpeg', 'image/png', 'image/webp']
@@ -20,18 +20,16 @@ const handleFileChange = (e: Event) => {
 
 <template>
   <form
-    class="group animate-smooth isolate mx-auto mt-10 grid w-full max-w-9/10 flex-none grid-cols-1 grid-rows-1 overflow-hidden rounded-4xl border-2 border-dashed border-neutral-400 bg-neutral-50 hover:border-blue-700 lg:max-w-300"
+    class="group animate-smooth isolate mx-auto mt-10 grid w-full max-w-9/10 flex-none grid-cols-1 grid-rows-1 overflow-hidden rounded-4xl border-2 border-dashed border-neutral-400 bg-white hover:border-blue-700 lg:max-w-300"
     @submit.prevent
   >
     <!-- Sekcja podglądu -->
-    <div
-      class="animate-smooth z-1 col-start-1 row-start-1 aspect-3/4 w-full group-hover:scale-105 sm:aspect-2/1"
-    >
+    <div class="z-1 col-start-1 row-start-1 aspect-3/4 w-full sm:aspect-2/1">
       <img
         v-if="previewUrl"
         :src="previewUrl"
         alt="Uploaded preview"
-        class="h-full w-full object-cover"
+        class="animate-smooth h-full w-full object-cover group-hover:scale-105"
       />
     </div>
 
@@ -72,7 +70,7 @@ const handleFileChange = (e: Event) => {
 
       <button
         type="submit"
-        class="animate-smooth w-fit flex-none cursor-pointer self-center rounded-4xl border-2 border-blue-700 bg-blue-700 px-8 py-3 leading-normal font-semibold text-neutral-50 shadow-lg hover:bg-neutral-50 hover:text-blue-700 active:scale-95"
+        class="animate-smooth w-fit flex-none transform-gpu cursor-pointer self-center rounded-4xl border-2 border-blue-700 bg-blue-700 px-8 py-3 leading-normal font-semibold text-neutral-50 shadow-lg hover:bg-neutral-50 hover:text-blue-700 active:scale-95"
       >
         Analyse
       </button>
