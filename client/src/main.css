@@ -3,6 +3,7 @@
 /* flex / grid = min-w-0 min-h-0 (if any problems related to layout in flexbox / grid, always try this) */
 /* transform-gpu (if any problems with animations / transitions, always try this) */
 /* always wrapper + img -> aspect-ratio + width on wrapper, w-full + h-full + object-fit on img */
+/* https://getcssscan.com/css-box-shadow-examples */
 
 @utility animate-smooth {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, scale, rotate, translate, filter, backdrop-filter;
@@ -15,73 +16,6 @@
 }
 
 @theme {
-  /* Perfect for small interactive elements like tags, badges, or small buttons.
-     Provides a very subtle depth without being distracting. */
-  --shadow-soft-1: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
-
-  /* Best for base-level components: standard cards, regular buttons, or list items.
-     Creates a natural, grounded feel. */
-  --shadow-soft-2: 0 2px 4px -1px rgba(0, 0, 0, 0.04),
-                   0 4px 6px -1px rgba(0, 0, 0, 0.04);
-
-  /* Ideal for hover states on standard cards, or default states for prominent widgets.
-     Gives a clear but smooth lift off the page. */
-  --shadow-soft-3: 0 4px 6px -2px rgba(0, 0, 0, 0.03),
-                   0 10px 15px -3px rgba(0, 0, 0, 0.05);
-
-  /* Designed specifically for dropdown menus, tooltips, and popovers.
-     Ensures these elements clearly float above the main layout. */
-  --shadow-dropdown: 0 10px 15px -3px rgba(0, 0, 0, 0.04),
-                     0 20px 25px -5px rgba(0, 0, 0, 0.06);
-
-  /* Reserved for modals, dialog boxes, and critical floating action buttons (FABs).
-     Maximum depth to focus the user's attention completely. */
-  --shadow-modal: 0 20px 25px -5px rgba(0, 0, 0, 0.04),
-                  0 30px 40px -10px rgba(0, 0, 0, 0.08);
-
-  /* Great for text inputs, search bars, or pressed button states.
-     Creates a soft, modern indented look. */
-  --shadow-inner-soft: inset 0 2px 4px 0 rgba(0, 0, 0, 0.04);
-
-  /* Ultra-subtle multi-layered shadow.
-     Perfect for very small interactive elements, badges, or subtle borders. */
-  --shadow-smooth-xs: 0 1px 1px rgba(0, 0, 0, 0.01),
-                      0 2px 2px rgba(0, 0, 0, 0.01),
-                      0 4px 4px rgba(0, 0, 0, 0.02),
-                      0 8px 8px rgba(0, 0, 0, 0.02);
-
-  /* Soft multi-layered shadow for base components.
-     Use for standard cards, buttons, or list items to give them a natural lift. */
-  --shadow-smooth-sm: 0 1px 1px rgba(0, 0, 0, 0.02),
-                      0 2px 2px rgba(0, 0, 0, 0.02),
-                      0 4px 4px rgba(0, 0, 0, 0.03),
-                      0 8px 8px rgba(0, 0, 0, 0.03),
-                      0 16px 16px rgba(0, 0, 0, 0.04);
-
-  /* Pronounced multi-layered shadow.
-     Great for hover states on standard cards or for primary feature widgets. */
-  --shadow-smooth-md: 0 2px 2px rgba(0, 0, 0, 0.02),
-                      0 4px 4px rgba(0, 0, 0, 0.03),
-                      0 8px 8px rgba(0, 0, 0, 0.04),
-                      0 16px 16px rgba(0, 0, 0, 0.04),
-                      0 32px 32px rgba(0, 0, 0, 0.05);
-
-  /* Deep multi-layered shadow with wide spread.
-     Designed for dropdowns, navigation menus, and floating command palettes. */
-  --shadow-smooth-lg: 0 2px 2px rgba(0, 0, 0, 0.02),
-                      0 4px 4px rgba(0, 0, 0, 0.03),
-                      0 8px 8px rgba(0, 0, 0, 0.04),
-                      0 16px 16px rgba(0, 0, 0, 0.05),
-                      0 32px 32px rgba(0, 0, 0, 0.05),
-                      0 64px 64px rgba(0, 0, 0, 0.06);
-
-  /* Maximum depth multi-layered shadow.
-     Reserved strictly for center-screen modals and critical dialog boxes. */
-  --shadow-smooth-xl: 0 4px 4px rgba(0, 0, 0, 0.02),
-                      0 8px 8px rgba(0, 0, 0, 0.03),
-                      0 16px 16px rgba(0, 0, 0, 0.04),
-                      0 32px 32px rgba(0, 0, 0, 0.05),
-                      0 64px 64px rgba(0, 0, 0, 0.06),
-                      0 100px 100px rgba(0, 0, 0, 0.07);
+  --shadow-8: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 
