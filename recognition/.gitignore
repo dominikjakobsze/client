@@ -1,0 +1,8 @@
+*.md
+!README.md
+.venv
+.idea
+**/__pycache__
+*/**/__pycache__
+__pycache__
+.env
